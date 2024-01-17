@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+        <title>Player Registration</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="mt-4 mb-4">Player Registration Form</h1>
+            <form method="post">
+                <div class="form-group mb-4">
+                    <label for="first_name">First Name: </label>
+                    <input class="form-control" type="text" id="first_name" name="first_name" required>
+                </div>
+                <div class="form-group mb-4>
+                    <label for="last_name">Last Name:</label>
+                <input class="form-control" type="text" id="last_name" name="last_name" required>
+                </div>
+                <div class="form-group mb-4>
+                    <label for="email">Email: </label>
+                    <input class="form-control" type="email" id="email" name="email" required>
+                </div>
+                <div>
+                <div class="form-group mb-4>
+                <label for="dob">Date of Birth: </label>
+                <input class="form-control" type="date" id="dob" name="dob" required>
+                </div>
+                <div>
+
+                    <label>Player Position</label>
+                    <br>
+                </div>
+                <div>
+                    <div class="btn-group-vertical" id="position">
+                        <input class="btn-check form-control" type="radio" id="Goalkeeper" value="Goalkeeper" name="position">
+                        <label class="btn btn-outline-secondary" for="Goalkeeper">GoalKeeper</label>
+
+                        <input class="btn-check form-control" type="radio" id="Right Back" value="Right Back" name="position">
+                        <label class="btn btn-outline-secondary" for="Right Back">Right Back</label>
+
+                        <input class="btn-check form-control" type="radio" id="Centre Back" value="Centre Back" name="position">
+                        <label class="btn btn-outline-secondary" for="Centre Back">Centre Back</label>
+
+                        <input class="btn-check form-control" type="radio" id="Left Back" value="Left Back" name="position">
+                        <label class="btn btn-outline-secondary" for="Left Back">Left Back</label>
+
+                        <input class="btn-check form-control" type="radio" id="Defensive Midfielder" value="Defensive Midfielder" name="position">
+                        <label class="btn btn-outline-secondary" for="Defensive Midfielder">Defensive Midfielder</label>
+
+                        <input class="btn-check form-control" type="radio" id="Centre Midfielder" value="Centre Midfielder" name="position">
+                        <label class="btn btn-outline-secondary" for="Centre Midfielder">Centre Midfielder</label>
+
+                        <input class="btn-check form-control" type="radio" id="Attacking Midfielder" value="Attacking Midfielder" name="position">
+                        <label class="btn btn-outline-secondary" for="Attacking Midfielder">Attacking Midfielder</label>
+
+                        <input class="btn-check form-control" type="radio" id="Left Winger" value="Left Winger" name="position">
+                        <label class="btn btn-outline-secondary" for="Left Winger">Left Winger</label>
+
+                        <input class="btn-check form-control" type="radio" id="Right Winger" value="Right Winger" name="position">
+                        <label class="btn btn-outline-secondary" for="Right Winger">Right Winger</label>
+
+                        <input class="btn-check form-control" type="radio" id="Striker" value="Striker" name="position">
+                        <label class="btn btn-outline-secondary" for="Striker">Striker</label>
+                    </div>
+               </div>
+               <div>
+                   <button class="btn btn-secondary mb-4" type="submit">Submit</button>
+                   {% with messages = get_flashed_messages() %}
+                   {% if messages %}
+               </div>
+               <div class="alert alert-success">
+                   {% for message in messages %}
+                    {{ message }}
+                   {% endfor %}
+               </div>
+                    {% endif %}
+                    {% endwith %}
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
